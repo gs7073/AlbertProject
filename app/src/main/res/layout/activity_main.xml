@@ -102,6 +102,16 @@
             android:visibility="invisible"
 
             android:text="Check Answer!" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="76dp" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:text="New" />
     </LinearLayout>
 
     <LinearLayout
