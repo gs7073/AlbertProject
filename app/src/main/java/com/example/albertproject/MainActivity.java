@@ -50,6 +50,12 @@ public class MainActivity extends AppCompatActivity {
         int correct_answer = random1+random2;
         textView.setText(String.valueOf(random1));
         textView2.setText(String.valueOf(random2));
+        int random3 = rnd.nextInt(90) + 10;
+        int random4 = rnd.nextInt(90) + 10;
+        int correct_answer2 = random3 + random4;
+        int random5 = rnd.nextInt(90) + 10;
+        int random6 = rnd.nextInt(90) + 10;
+        int correct_answer3 = random5 + random6;
 
 
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -65,9 +71,6 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     image_result.setVisibility(View.VISIBLE);
-                    int random3 = rnd.nextInt(90) + 10;
-                    int random4 = rnd.nextInt(90) + 10;
-                    int correct_answer2 = random3 + random4;
                     textView3.setText(String.valueOf(random3));
                     textView4.setText(String.valueOf(random4));
                     textView3.setVisibility(View.VISIBLE);
@@ -81,7 +84,44 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String answerText = et2.getText().toString();
+                if (!answerText.isEmpty()) {
+                    int userAnswer = Integer.parseInt(answerText);
+                    if (userAnswer == correct_answer2) {
+                        image_result2.setImageResource(R.drawable.v);
+                    } else {
+                        image_result2.setImageResource(R.drawable.x);
+                    }
+                    image_result2.setVisibility(View.VISIBLE);
+                    textView5.setText(String.valueOf(random5));
+                    textView6.setText(String.valueOf(random6));
+                    textView5.setVisibility(View.VISIBLE);
+                    textView6.setVisibility(View.VISIBLE);
+                    et3.setVisibility(View.VISIBLE);
+                    btn3.setVisibility(View.VISIBLE);
 
+                }
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String answerText = et3.getText().toString();
+                if (!answerText.isEmpty()) {
+                    int userAnswer = Integer.parseInt(answerText);
+                    if (userAnswer == correct_answer3) {
+                        image_result3.setImageResource(R.drawable.v);
+                    } else {
+                        image_result3.setImageResource(R.drawable.x);
+                    }
+                    image_result3.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+    }
 
     }
-}
+
