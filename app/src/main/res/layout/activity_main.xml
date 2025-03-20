@@ -15,14 +15,14 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="140dp"
             android:text="TextView"
             android:textSize="30dp" />
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="123dp"
             android:text="TextView"
@@ -37,7 +37,7 @@
             android:inputType="number" />
 
         <ImageView
-            android:id="@+id/image_result2"
+            android:id="@+id/image_result"
             android:layout_width="match_parent"
             android:layout_height="165dp"
             android:visibility="invisible"
@@ -63,6 +63,8 @@
             android:layout_width="match_parent"
             android:layout_height="140dp"
             android:text="TextView"
+            android:visibility="invisible"
+
             android:textSize="30dp" />
 
         <TextView
@@ -70,6 +72,8 @@
             android:layout_width="match_parent"
             android:layout_height="123dp"
             android:text="TextView"
+            android:visibility="invisible"
+
             android:textSize="30dp" />
 
         <EditText
@@ -78,6 +82,7 @@
             android:layout_height="72dp"
             android:ems="10"
             android:hint="Enter Sum"
+            android:visibility="invisible"
             android:inputType="number" />
 
         <ImageView
@@ -85,6 +90,7 @@
             android:layout_width="match_parent"
             android:layout_height="165dp"
             android:visibility="invisible"
+
             app:srcCompat="@drawable/v" />
 
         <Button
@@ -93,6 +99,8 @@
             android:layout_height="64dp"
             android:background="#4CAF50"
             android:backgroundTint="#4CAF50"
+            android:visibility="invisible"
+
             android:text="Check Answer!" />
     </LinearLayout>
 

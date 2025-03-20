@@ -12,10 +12,10 @@ import java.util.Random;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    TextView textView, textView2;
-    EditText et1;
-    Button btn1;
-    ImageView image_result;
+    TextView textView, textView2, textView3, textView4, textView5, textView6;
+    EditText et1, et2, et3;
+    Button btn1, btn2, btn3;
+    ImageView image_result, image_result2, image_result3;
 
 
 
@@ -24,11 +24,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         et1 = findViewById(R.id.et1);
-        btn1 = findViewById(R.id.btn1);
-        image_result = findViewById(R.id.image_result2);
+        et2 = findViewById(R.id.et2);
+        et3 = findViewById(R.id.et3);
 
-        textView = findViewById(R.id.textView3);
-        textView2 = findViewById(R.id.textView4);
+        btn1 = findViewById(R.id.btn1);
+        btn2 = findViewById(R.id.btn2);
+        btn3 = findViewById(R.id.btn3);
+
+        image_result = findViewById(R.id.image_result);
+        image_result2 = findViewById(R.id.image_result2);
+        image_result3 = findViewById(R.id.image_result3);
+
+
+        textView = findViewById(R.id.textView);
+        textView2 = findViewById(R.id.textView2);
+        textView3 = findViewById(R.id.textView3);
+        textView4 = findViewById(R.id.textView4);
+        textView5 = findViewById(R.id.textView5);
+        textView6 = findViewById(R.id.textView6);
+
 
         Random rnd = new Random();
         int random1 = rnd.nextInt(89) + 10;
@@ -51,9 +65,23 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     image_result.setVisibility(View.VISIBLE);
+                    int random3 = rnd.nextInt(90) + 10;
+                    int random4 = rnd.nextInt(90) + 10;
+                    int correct_answer2 = random3 + random4;
+                    textView3.setText(String.valueOf(random3));
+                    textView4.setText(String.valueOf(random4));
+                    textView3.setVisibility(View.VISIBLE);
+                    textView4.setVisibility(View.VISIBLE);
+                    et2.setVisibility(View.VISIBLE);
+                    btn2.setVisibility(View.VISIBLE);
+
+
+
                 }
+
             }
         });
+
 
     }
 }
